@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('currency', 3);
             $table->text('reason')->nullable();
             $table->timestamp('occurred_at')->nullable();
-            $table->timestamp('received_at');
+            $table->timestamp('received_at')->useCurrent();
             $table->boolean('requires_review')->default(false);
             $table->timestamps();
 
